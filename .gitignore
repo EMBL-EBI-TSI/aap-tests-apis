@@ -1,0 +1,13 @@
+### This Project ###
+
+### Gradle ###
+.gradle
+build
+out
+!gradle/wrapper/gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
