@@ -17,4 +17,4 @@ Feature: Create user and get a token
     And header Authorization = call read('classpath:basic-auth.js') { username: '#(actualUsername)', password: '#(timestamp)' }
     When method GET
     Then status 200
-    And def token = response
+    And def token = 'Bearer '+response
