@@ -12,6 +12,7 @@ Feature: Create user and get a token
     When method POST
     Then status 200
     And def reference = response
+    And def password = timestamp
     # and get a token (do we want to restrict the length?)
     Given path '/auth'
     And header Authorization = call read('classpath:basic-auth.js') { username: '#(actualUsername)', password: '#(timestamp)' }
