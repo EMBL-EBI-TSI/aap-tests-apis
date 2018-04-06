@@ -20,4 +20,4 @@ Feature: All components are alive
     Given path '/profiles/info'
     When method GET
     Then status 200
-    And match $ == { name: 'aap-profiles-api' }
+    And match $ contains { name: 'aap-profiles-api' }
