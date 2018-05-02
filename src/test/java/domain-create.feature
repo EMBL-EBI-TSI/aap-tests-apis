@@ -1,4 +1,4 @@
-Feature: Create user and get a token
+Feature: Create domain and add a manager
 
   Background:
     * url baseUrl
