@@ -23,5 +23,8 @@ The tests will produce JUnit compatible [XML reports](build/test-results/test), 
 
 ## Pre-requisite
 
-java 8 and gradle
+Java 8 and gradle
+
+Some tests rely on variables being set: these are imported directly from environment variables
+(like `AAP_SDO_TEST_PREFIX_PASSWORD` for [prefix.feature](src/test/java/aap/prefix.feature))
 

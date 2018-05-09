@@ -29,6 +29,12 @@ test {
     systemProperty "cucumber.options", System.properties.getProperty("cucumber.options")
     // pull karate options into the cucumber jvm
     systemProperty "karate.env", System.properties.getProperty("karate.env")
+    // pull our options into the cucumber jvm: any environment variable that starts with AAP_
+    for( Map.Entry<String, String> envVar : System.getenv().entrySet() ) {
+        if(envVar.key.startsWith("AAP_")) {
+            systemProperty envVar.key, envVar.value
+        }
+    }
     // ensure tests are always run
     outputs.upToDateWhen { false }
 }
