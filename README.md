@@ -26,5 +26,6 @@ The tests will produce JUnit compatible [XML reports](build/test-results/test), 
 Java 8 and gradle
 
 Some tests rely on variables being set: these are imported directly from environment variables
-(like `AAP_SDO_TEST_PREFIX_PASSWORD` for [prefix.feature](src/test/java/aap/prefix.feature))
+(like `AAP_SDO_TEST_PREFIX_PASSWORD` for [prefix.feature](src/test/java/aap/prefix.feature)). We
+automatically import any environment variable that start with `AAP_`.
 
